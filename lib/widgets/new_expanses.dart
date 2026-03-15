@@ -1,3 +1,4 @@
+import 'package:expenses_app/widgets/expanses.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import 'package:expenses_app/Models/expanses.dart';
@@ -72,8 +73,9 @@ class _NewExpansesState extends State<NewExpanses> {
                           lastDate: now,
                         );
 
-                        // 🐞 BUG 1: setState
-                        _selectedDate = pickdata;
+                        //Bug 1: 
+                          _selectedDate = pickdata;
+                        
                       },
                       icon: const Icon(Icons.calendar_month),
                     ),
@@ -109,10 +111,10 @@ class _NewExpansesState extends State<NewExpanses> {
                   final double? enteredAmount =
                       double.tryParse(_amountcontroller.text);
 
-                  // 🐞 BUG 2: 
+                 
                   final bool amountisvalid =
                       enteredAmount != null && enteredAmount > 0;
-
+                    // Bug 2: 
                   if (_titlecontroller.text.trim().isEmpty ||
                       amountisvalid ||
                       _selectedDate == null) {
@@ -127,16 +129,9 @@ class _NewExpansesState extends State<NewExpanses> {
                       category: _selectedCategory,
                     ),
                   );
-
-                  // 🐞 BUG 3: Navigation problem
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (ctx) => const Scaffold(
-                        body: Center(child: Text("Wrong Navigation 😅")),
-                      ),
-                    ),
-                  );
+                  // Bug 3: 
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) =>  Expanses()));
                 },
                 child: const Text('Save Expanses'),
               ),
