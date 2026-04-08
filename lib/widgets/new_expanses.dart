@@ -74,7 +74,7 @@ class _NewExpansesState extends State<NewExpanses> {
                         );
 
                         //Bug 1: 
-                        setState(() {
+                        setState(() { 
                                _selectedDate = pickdata;
                         });
                      //if function add cant add data
@@ -119,11 +119,11 @@ class _NewExpansesState extends State<NewExpanses> {
                       enteredAmount != null && enteredAmount > 0;
                     // Bug 2: 
                   if (_titlecontroller.text.trim().isEmpty ||
-                     !amountisvalid ||
+                    !amountisvalid ||
                       _selectedDate == null) {
                     return;
                   }
-                  //if amount is vaild return empty
+                  //if amount isvaild return is empty
                   widget.onAddExpanses(
                     Expansesmodel(
                       title: _titlecontroller.text,

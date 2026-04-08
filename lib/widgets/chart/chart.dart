@@ -54,7 +54,7 @@ class Chart extends StatelessWidget {
                         ? 0
                         // Bug 7: 
                         :  bucket.totalAmount/maxTotalAmount,
-                        //mistake equstion
+                        //mistake equastion
                   ),
               ],
             ),
