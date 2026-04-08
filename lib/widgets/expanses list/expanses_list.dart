@@ -23,7 +23,8 @@ class ExpansesList extends StatelessWidget {
           color: Colors.red,
         ),
         // Bug 6: 
-        onDismissed: (direction) => onRemoveExpanses(expanses[0]),
+        onDismissed: (direction) => onRemoveExpanses(expanses[index]),
+        //remove first list
         child: expansesItem(expanses: expanses[index]),
       ),
     );

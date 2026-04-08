@@ -40,9 +40,12 @@ class _ExpansesState extends State<Expanses> {
   ];
   void _addExpanses(Expansesmodel expanses) {
 
-   // Bug 4: 
+   // Bug 4:
+   setState(() {
       _registeredExpanses.add(expanses);
-  
+   });
+     
+  //if funcation cant add use setstate
   }
 
   void _removeExpanses(Expansesmodel expanses) {

@@ -23,8 +23,8 @@ class expansesItem extends StatelessWidget {
               ),
               child: Icon(
                 // Bug 5: 
-               Icons.attach_money,
-                color: Theme.of(context).colorScheme.primary,
+              categoryicon[expanses.category]
+              //catogery by icon
               ),
             ),
 
